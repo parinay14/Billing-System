@@ -1,0 +1,28 @@
+# Dataset Description
+The dataset used in this project is derived from the Google Play Store and includes the following key attributes:
+
+Rating: The target variable, representing the app's average user rating (numerical, typically between 1 and 5).
+Reviews: The number of user reviews the app has received (integer).
+Size: The size of the app in megabytes (float; some entries may include "Varies with device" and need cleaning).
+Installs: The number of times the app has been installed (categorical, converted to numerical during preprocessing).
+Price: The cost of the app in dollars (numerical, with free apps denoted as 0).
+Category: The app's category (categorical, dummy-encoded for analysis).
+Content Rating: The maturity level of the app's content (e.g., Everyone, Teen, Mature 17+, etc., also dummy-encoded).
+Other Features: Columns such as Current Ver, Android Ver, and Last Updated were excluded from the analysis as they were deemed irrelevant for predicting ratings.
+
+# Data Preprocessing Highlights
+Outliers: Outliers in the Price column were handled using the Interquartile Range (IQR) method.
+Normalization: Features like Size, Installs, and Reviews were scaled for uniformity, but the Rating column was left unnormalized to preserve interpretability.
+Categorical Variables: Converted to numerical format through one-hot encoding to enable use in regression models.
+This cleaned and processed dataset forms the foundation for training a robust predictive model.
+
+
+
+
+
+
+
+
+
+
+
